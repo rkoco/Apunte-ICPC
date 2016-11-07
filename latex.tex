@@ -1,0 +1,109 @@
+\documentclass[10pt,landscape,twocolumn,a4paper,notitlepage]{article}
+\usepackage{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{makeidx}
+
+%%% Margenes
+\setlength{\columnsep}{0.25in}    % default=10pt
+\setlength{\columnseprule}{0.5pt}    % default=0pt (no line)
+ 
+\addtolength{\textheight}{2.35in}
+\addtolength{\topmargin}{-0.9in}     % ~ -0.5 del incremento anterior
+ 
+\addtolength{\textwidth}{1.1in}
+\addtolength{\oddsidemargin}{-0.55in} % -0.5 del incremento anterior
+ 
+\setlength{\headsep}{0.08in}
+\setlength{\parskip}{0in}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0mm}
+ 
+%%% Encabezado y pie de pagina
+\pagestyle{fancy}
+\fancyhead[LO]{\textbf{\title}}
+\fancyhead[C]{\leftmark\ -\ \rightmark}
+\fancyhead[RO]{P\'agina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot{}
+\definecolor{darkblue}{rgb}{0,0,0.4}
+
+\lstloadlanguages{Java}
+\lstnewenvironment{code}
+	{%\lstset{	numbers=none, frame=lines, basicstyle=\small\ttfamily, }%
+	 \csname lst@SetFirstLabel\endcsname}
+	{\csname lst@SaveFirstLabel\endcsname}
+\lstset{% general command to set parameter(s)
+	language=Java, basicstyle=\small\ttfamily, keywordstyle=\slshape,
+	emph=[1]{tipo,usa}, emphstyle={[1]\sffamily\bfseries},
+	morekeywords={tint,forn,forsn},
+	basewidth={0.47em,0.40em},
+	columns=fixed, fontadjust, resetmargins, xrightmargin=5pt, xleftmargin=15pt,
+	flexiblecolumns=false, tabsize=2, breaklines,	breakatwhitespace=false, extendedchars=true, showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=9pt,
+	frame=l, framesep=3pt,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color{darkblue}\ttfamily,
+    stringstyle=\color{magenta}\ttfamily,
+    commentstyle=\color{RedOrange}\ttfamily,
+    morecomment=[l][\color{OliveGreen}]{\#}
+}
+
+
+\begin{document}
+\def\title{Calce Team}
+\tableofcontents\newpage
+
+\section{Estructuras}
+\subsection{SegmentTree}
+\lstinputlisting{Estructuras/SegmentTree.java}
+\subsection{SegmentTree - lazy}
+\lstinputlisting{Estructuras/SegmentTree.java}
+\subsection{FenwickTree - consultas por rango, update puntual}
+\lstinputlisting{Estructuras/FenwickTree.java}
+
+\subsection{FenwickTree, consultas puntuales, update por rango}
+\lstinputlisting{Estructuras/FenwickTree2.java}
+
+\section{Algoritmos}
+\subsection{Básico}
+\lstinputlisting{Algoritmos/Collection.java}
+
+\section{Strings}
+\subsection{KMP}
+\lstinputlisting{Strings/KMP.java}
+\subsection{Suffix Array}
+\lstinputlisting{Strings/SA.java}
+
+
+\section{Geometría}
+
+
+
+\section{Matemática}
+
+
+\section{Grafos}
+\subsection{DFS}
+\subsection{BFS}
+\subsection{LCA}
+\lstinputlisting{Grafos/LCA.java}
+
+\section{Flow}
+
+
+
+\section{Otros}
+
+\lstinputlisting{Otros/BitManipulation.java}
+
+\end{document}
